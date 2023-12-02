@@ -1,4 +1,6 @@
 package com.assignmentdemo.Pageobject;
+import java.util.List;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,26 +30,34 @@ public class LandingPage {
     private By subsriptionlable = By.xpath("//h2[text()='Subscription']");
     private By Enteremailidfield = By.xpath("//input[@id='susbscribe_email']");
     private By Arrowbuttonclick = By.xpath("//i[@class='fa fa-arrow-circle-o-right']");
-    private By Validatingheaderbtns = By.xpath("//ul[@class='nav navbar-nav']");
+    private By ValidatenavbarList = By.xpath("//ul[@class='nav navbar-nav']");
     private By Loginbtn = By.xpath("//button[@class='btn btn-default']");
-    private By Successalert =By.xpath("//div[@class='alert-success alert']");
+    private By Successalert =By.xpath("//div[text()='You have been successfully subscribed!']");
   
    // Page Methods
-    
+  //***************VALIDATION S1*******************************************************************************
     public void Validatingheaderbtns()
     {
-    	WebElement ValidatingheaderbtnsEle = driver.findElement(Validatingheaderbtns);
+    	WebElement ValidatingheaderbtnsEle = driver.findElement(ValidatenavbarList);
 	    Assert.assertEquals(true, ValidatingheaderbtnsEle.isDisplayed());
 	    
    }
+    public void ValidateeleHeaderList(String Headerlist)
+    {
+    	List<WebElement> searchedProdListEle = driver.findElements(ValidatenavbarList);
+ 	   Assert.assertEquals(true, searchedProdListEle.get(0).getText().contains(Headerlist));
+    }
+ 
+    //***************VALIDATION S1*******************************************************************************
     
-  //SUBSRIPTION 
+  //*****************SUBSRIPTIONS2 ********************************************************************************
     public void validateSUBSCRIPTIONlablefooter()
     {
 		WebElement subsriptionlableele = driver.findElement(subsriptionlable);
 		Assert.assertEquals(true, subsriptionlableele.isDisplayed());
 		
-    }public void useremailidd(String UserEnterEmailidTxt)
+    }
+    public void useremailidd(String UserEnterEmailidTxt)
     {
     	WebElement Enteremailidfieldele = driver.findElement(Enteremailidfield);
     	Enteremailidfieldele.sendKeys(UserEnterEmailidTxt);
@@ -58,13 +68,12 @@ public class LandingPage {
     	ArrowbuttonclickEle.click();
     
     	}
-    
-    public void Succesfullydone()
+    public void Succesfullydone(String Successfullymessage)
     {
     	WebElement Successalertele = driver.findElement(Successalert);
 		Assert.assertEquals(true, Successalertele.isDisplayed());
     }
-    //SUBSRIPTION 
+  //*****************SUBSRIPTIONS2 ***************************************************************
 
     
     public void clickOnSignUpLoginBtn()

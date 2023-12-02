@@ -1,16 +1,11 @@
 package com.assignmentdemo.stepdefs;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import com.assignmentdemo.Pageobject.LandingPage;
 import com.assignmentdemo.Pageobject.SignupAndLoginPage;
@@ -27,7 +22,6 @@ import io.cucumber.java.en.When;
 public class StepDefs {
 	private static final Logger logger = LogManager.getLogger(StepDefs.class);
 
-	private static final DataTable DataTable = null;
 
 	WebDriver driver;
 	WebDriverWait wait;
@@ -59,34 +53,56 @@ public class StepDefs {
 		scn.log("Browser got closed");
 		logger.info("Browser got closed");
 	}
-	//***************VALIDATION S1****************
+	
+	@After(order=2) // this will execute first, higher the number, sooner it executes
+	  public void takeScreenShot(Scenario s) {
+	    if (s.isFailed()) {
+	        TakesScreenshot scrnShot = (TakesScreenshot)driver;
+	        byte[] data = scrnShot.getScreenshotAs(OutputType.BYTES);
+	        scn.attach(data, "image/png","Failed Step Name: " + s.getName());
+	    }else{
+	        scn.log("Test case is passed, no screen shot captured");
+	    }
+	  }
+	//***************@ValidationOflandingpageElementS1****************
 	
 	
-	@Given("user navigate to the home application url")
-	public void user_navigate_to_the_home_application_url() {
-		WebDriverfactory.navigateToTheUrl(baseUrl);
-	}
 
-	@When("Validate header section buttons of homepage")
-	public void validate_header_section_buttons_of_homepage() {
-		landingpage.Validatingheaderbtns();
-	}
+		@Given("user navigate to the home application url")
+		public void user_navigate_to_the_home_application_url() {
+			WebDriverfactory.navigateToTheUrl(baseUrl);
+		}
+
+		@When("user header over to Home Page")
+		public void user_header_over_to_home_page() {
+			
+			landingpage.Validatingheaderbtns();
+		}
+		@Then("user search for a Elements on home Page {string}")
+		public void user_search_for_a_elements_on_home_page(String Web_Element) {
+			landingpage.ValidateeleHeaderList(Web_Element);
+		}
+
+
 
 	
 	
 	
 	
 	
-	
-	
-//	@Then("Validate header section buttons of homepage")
-//	public void validate_header_section_buttons_of_homepage() {
-//	   
-//		
+//	@Given("user navigate to the home application url")
+//	public void user_navigate_to_the_home_application_url() {
+//		WebDriverfactory.navigateToTheUrl(baseUrl);
 //	}
-	//*****************VALIDATION S1************************
+//
+//	@When("Validate header section buttons of homepage")
+//	public void validate_header_section_buttons_of_homepage() {
+//		landingpage.Validatingheaderbtns();
+//	}
+
+	//*****************@ValidationOflandingpageElementS1************************
 	
-	//*****************SUBSRIPTION *****************
+	//*****************SUBSRIPTIONS2 *****************
 	
 	
 			@Given("User see SUBSCRIPTION Lable")
@@ -103,68 +119,72 @@ public class StepDefs {
 			    public void click_on_arrow_button() {
 			    landingpage.clickonarrowButton();
 			    }
-			 @Then("Validate User has been successfully subscribed")
-			 public void Validate_User_has_been_successfully_subscribed()
-			 {
-				 landingpage.Succesfullydone();
+			 
+			  @Then("Validate User has {string}")
+			 public void validate_user_has(String Successfullymessage) {
+				 landingpage.Succesfullydone(Successfullymessage);
 			 }
+			
 			 
-	//*****************SUBSRIPTION *****************
+	//*****************SUBSRIPTIONS2 *****************
 		
-	//*****************ErrorMessage*****************//
+	//*****************ErrorMessageS3*****************//
 
-			 @Given("User Navigate to Login Page")
-				 public void user_navigate_to_login_page() {
-				 landingpage.clickOnSignUpLoginBtn();
-				 }
-			 @When("User enters {string} and {string}")
-				 public void user_enters_and(String string, String string2) {
-				    
-				 }
-				 @When("user enter Username and Password in login page")
-				 public void user_enter_username_and_password_in_login_page(DataTable dataTable) {
-					 
-					 signupandloginpage.Checkitsvalidornot();
-					
-					
-					 
-					  }
-				 @Then("Error Message displayed")
-				 public void error_message_displayed() {
-				     // Write code here that turns the phrase above into concrete actions
-				     throw new io.cucumber.java.PendingException();
-				 }
-
-
-	 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-//		 @Given("User Navigate to Login Page")
-//			public void user_navigate_to_login_page() {
-//			landingpage.clickOnSignUpLoginBtn();
-//
-//		 }
-//		@When("User enters {string} and {string}")
-//		public void user_enters_and(String username, String password) throws InterruptedException 
-//		{
-//			 signupandloginpage.Checkitsvalidornot(username,password);
-//			 	
-//			 HashMap<String,String> datauser =new HashMap<String,String>();
-//			  for (@SuppressWarnings("unused") Map.Entry<String,String> Entry : datauser.entrySet());
-//			  DataTable.asMaps();
-//			 }
-	//*****************ErrorMessage*****************//
+			  
+				  @Given("User Navigate to Login Page")
+				  public void user_navigate_to_login_page() {
+					  landingpage.clickOnSignUpLoginBtn();
+				  }
+				  @When("user enters email id as {string}")
+				  public void user_enters_email_id_as(String username) 
+				  {
+					  signupandloginpage.ErrormsgEnterUsername(username);
+				  }
+				  @When("user enters password as {string}")
+				  public void user_enters_password_as(String Password) 
+				  {
+					  signupandloginpage.ErrormsgEnterPassword(Password);
+				  }
+				  @When("checking click on login button")
+				  public void checking_click_on_login_button() 
+				  {
+					  landingpage.loginbtn();
+				  }
+				  @Then("Validation of  Error message {string}")
+				  public void validation_of_error_message(String message) {
+					  signupandloginpage.Validatingerrormsg(message);
+				  }
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+//			 @Given("User Navigate to Login Page")
+//				 public void user_navigate_to_login_page() {
+//				 landingpage.clickOnSignUpLoginBtn();
+//				 }
+//			 @When("User enters {string} and {string}")
+//				 public void user_enters_and(String Username , String Password ) {
+//				 signupandloginpage.Checkitsvalidornot(Username,Password);
+//				    
+//				 }
+//				
+//				 @Then("Error Message displayed")
+//				 public void error_message_displayed() {
+//				     // Write code here that turns the phrase above into concrete actions
+//				     throw new io.cucumber.java.PendingException();
+//				 }
+//*****************ErrorMessageS3*****************//
 
 
 			 	
 	
-	//***************** Sign up\\/login ************************
+	//***************** Sign up\\/loginS4 ************************
 
 	@Given("user clicks on Signup\\/login button form top header section")
 	public void user_clicks_on_signup_login_button_form_top_header_section()
@@ -214,47 +234,8 @@ public class StepDefs {
 	   
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//***************** Sign up\\/login ************************
+//***************** Sign up\\/loginS4 ************************
 	
-//	@Given("There is a user {string} and pass1\"")
-//	public void there_is_a_user_and_pass1(String string) {
-//		signupandloginpage.Enterinvalidcredentials(string, string);
-//	}
-//	@Given("There is a user {string} and pass1\\\"")
-//    public void there_is_a_user_and_pass1(String userRegEmailIDtx,  String userRegPasswordtx) throws Throwable 
-//    
-//	{
-//		
-//		
-//	}
-//    
-
-////@When("user enters valid registered email id as {string}")
-//public void user_enters_valid_registered_email_id_as(String userRegEmailIDtxt) {
-//	signupandloginpage.sendTextToLoginField(userRegEmailIDtxt);
-//}
-////@When("user enters valid password as {string}")
-//public void user_enters_valid_password_as(String userRegPasswordtxt) {
-//	signupandloginpage.sendTextToPasswordField(userRegPasswordtxt);
-//}
-
 
 
 

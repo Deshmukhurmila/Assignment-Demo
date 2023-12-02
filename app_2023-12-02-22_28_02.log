@@ -1,0 +1,70 @@
+2023-Dec-02 22:29:28 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:29:29 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:29:43 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:29:44 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:29:44 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:29:47 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:29:47 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:30:04 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:30:04 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:30:04 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:30:06 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:30:07 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:30:27 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:30:28 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:30:28 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:30:29 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:30:30 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:30:31 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:31:02 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:31:02 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:31:03 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:31:04 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:31:12 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:31:13 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:31:13 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:31:15 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:31:15 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:31:16 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:31:32 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:31:32 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:31:34 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:31:34 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:31:59 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:32:00 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:32:00 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:32:01 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:32:01 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:32:29 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:32:30 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:32:30 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:32:32 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:32:32 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:32:52 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:32:53 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:32:54 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:32:55 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:32:55 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:33:13 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:33:17 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:33:17 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:33:19 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:33:19 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:33:38 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:33:42 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:33:42 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:33:43 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:33:43 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:33:48 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:33:51 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:33:51 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:33:53 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:33:53 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:34:03 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:39:07 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:39:07 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-02 22:39:09 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Opera Browser invoked
+2023-Dec-02 22:39:10 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-02 22:39:12 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-02 22:43:32 PM [pool-1-thread-1] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-02 22:43:32 PM [pool-1-thread-1] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed

@@ -17,7 +17,6 @@ public class SignupAndLoginPage {
 	
 	
 	
-private static final String Hashmap = null;
 
 //private static final Logger logger = LogManager.getLogger(SignupAndLoginPage.class);
 	
@@ -41,6 +40,9 @@ private static final String Hashmap = null;
     private By loginButton = By.xpath("//a[text()=' Signup / Login']']");
     private By UserNameField =By.xpath("//input[@name='email']");
     private By PasswordField = By.xpath("//input[@name='password']");
+    private By ValidatingError =By.xpath("//p[text()='Your email or password is incorrect!']");
+  
+    
     
     
     
@@ -80,28 +82,37 @@ private static final String Hashmap = null;
 		loginButtonEle.click();
          }
          
-         public void Checkitsvalidornot()
+         public void ErrormsgEnterUsername(String Username)
          {
+        	 WebElement loginEmailIdFieldEle = driver.findElement(UserNameField);
+  		   loginEmailIdFieldEle.sendKeys(Username);
+        	
+         }
         	 
+         public void ErrormsgEnterPassword(String Password)
+         {
+        	 WebElement loginPasswordFieldEle = driver.findElement(PasswordField);
+     		loginPasswordFieldEle.sendKeys(Password);
         	
+         }
+         public void Validatingerrormsg(String message)
+         {
+        	 WebElement ValidatingErrorEle = driver.findElement(ValidatingError);
+        	 Assert.assertEquals(true, ValidatingErrorEle.isDisplayed());
+         }
+        	 
+        	 
 //			List<List<String>> Data = DataTable.asList(String.class);
-        	List<Map<String,String>> listdata = DataTable.asMaps(String.class,String.class);
-        	
-        	for(Map<String,String>mapdata:listdata)
-        	{
-        		driver.findElement(By.xpath("//input[@name='email']")).clear();
-        	driver.findElement(By.xpath("//input[@name='email']")).sendKeys(mapdata.get("username1"));
-        	driver.findElement(By.xpath("//input[@name='email']")).clear();
-			driver.findElement(By.xpath("//input[@name='email']")).sendKeys(mapdata.get("password1"));
-        	}
-//			driver.findElement(By.xpath("//input[@name='email']")).sendKeys(listdata.get(0).get(0));
-//			driver.findElement(By.xpath("//input[@name='email']")).sendKeys(listdata.get(0).get(1));
-			
-			
-//       	 WebElement loginEmailIdFieldEle = driver.findElement(Data.get(0));
-//  		   loginEmailIdFieldEle.sendKeys(userRegEmailIDtxt);
-// 		 WebElement loginPasswordFieldEle = driver.findElement(PasswordField);
-//		  loginPasswordFieldEle.sendKeys(userRegPasswordtxt);
+//        	List<Map<String,String>> listdata = DataTable.asMaps(String.class,String.class);
+//        	
+//        	for(Map<String,String>mapdata:listdata)
+//        	{
+//        		driver.findElement(By.xpath("//input[@name='email']")).clear();
+//        	driver.findElement(By.xpath("//input[@name='email']")).sendKeys(mapdata.get("Username"));
+//        	driver.findElement(By.xpath("//input[@name='email']")).clear();
+//			driver.findElement(By.xpath("//input[@name='email']")).sendKeys(mapdata.get("Username"));
+//        	}
+//			
 //  		   
          }
          
@@ -121,7 +132,7 @@ private static final String Hashmap = null;
 
     	 
 
-    	}
+    	
        
 
 
