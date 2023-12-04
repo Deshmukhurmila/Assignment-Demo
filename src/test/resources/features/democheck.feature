@@ -1,16 +1,14 @@
 @ui @democheck
 Feature: E-commerce application demo check
 
-
-
 Background: Navigation to the base URL of application
 Given user navigate to the home application url
-@ValidationOflandingpageElementS1
-Scenario Outline: user navigate to the home application url
+
+@ValidationOflandingpageElement
+Scenario:  Validate the header elements
+Given user navigate to the home application url
 When  user header over to Home Page
-Then  user search for a Elements on home Page "<Web_Element>"
-Examples:
-  |Web_Element|
+Then  Options underheader section 
   |  Home		 |
   |  Products  |
   |  Cart  |
@@ -19,19 +17,11 @@ Examples:
   |  API Testing |
   |  Video Tutorials  |
   |   Contact us|
-  
 
-#Background: Navigation to the base URL of application
-#Given user navigate to the home application url
-#@ValidationOflandingpageElementS1
-#Scenario: user navigate to the home application url
-#When  Validate header section buttons of homepage
-
-
-@SubscriptionS2
+@Subscription
 Scenario:  After launching url User is able to see, enter an email id  under subscription
 Given User see SUBSCRIPTION Lable
-When  User enter email id "urmiladeshmuk8181@gmail.com"
+When  User enter email id "urmiladeshmukh@gmail.com"
 And Click on Arrow button 
 Then Validate User has "You have been successfully subscribed!"
 
@@ -49,7 +39,7 @@ Examples:
 | Bheem@gmail.com | Test@542 |
 
 
-@RegUserLoginS4
+@RegUserLogin
 Scenario Outline: User is able to visit application login page and with valid credentials able to login in app
 Given user clicks on Signup/login button form top header section
 When user redirected to login page with title as "Automation Exercise - Signup / Login"

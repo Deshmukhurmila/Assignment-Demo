@@ -1,9 +1,14 @@
 package com.assignmentdemo.stepdefs;
 
+import java.util.List;
+import static org.junit.Assert.assertTrue;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -11,7 +16,6 @@ import com.assignmentdemo.Pageobject.LandingPage;
 import com.assignmentdemo.Pageobject.SignupAndLoginPage;
 import com.assignmentdemo.webdriver.WebDriverfactory;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -64,45 +68,37 @@ public class StepDefs {
 	        scn.log("Test case is passed, no screen shot captured");
 	    }
 	  }
-	//***************@ValidationOflandingpageElementS1****************
+	//***************@ValidationOflandingpageElement****************
 	
+	@Given("user navigate to the home application url")
+	public void user_navigate_to_the_home_application_url() {
+		WebDriverfactory.navigateToTheUrl(baseUrl);
+	}
 	
-
-		@Given("user navigate to the home application url")
-		public void user_navigate_to_the_home_application_url() {
-			WebDriverfactory.navigateToTheUrl(baseUrl);
-		}
 
 		@When("user header over to Home Page")
 		public void user_header_over_to_home_page() {
-			
 			landingpage.Validatingheaderbtns();
 		}
-		@Then("user search for a Elements on home Page {string}")
-		public void user_search_for_a_elements_on_home_page(String Web_Element) {
-			landingpage.ValidateeleHeaderList(Web_Element);
+
+		@Then("Options underheader section")
+		public void options_underheader_section(List<String> expectedElementTexts)
+		{
+			
+		        List<WebElement> elements = driver.findElements(By.xpath("//ul[@class='nav navbar-nav']/li[a]"));
+
+		        for (int i = 0; i < expectedElementTexts.size(); i++) {
+		            String actualText = elements.get(i).getText();
+		            String expectedText = expectedElementTexts.get(i);
+		            assertTrue("Element text mismatch at index " + i, actualText.contains(expectedText));
+		        
+		        }
 		}
+			
 
-
-
+	//*****************@ValidationOflandingpageElement************************
 	
-	
-	
-	
-	
-//	@Given("user navigate to the home application url")
-//	public void user_navigate_to_the_home_application_url() {
-//		WebDriverfactory.navigateToTheUrl(baseUrl);
-//	}
-//
-//	@When("Validate header section buttons of homepage")
-//	public void validate_header_section_buttons_of_homepage() {
-//		landingpage.Validatingheaderbtns();
-//	}
-
-	//*****************@ValidationOflandingpageElementS1************************
-	
-	//*****************SUBSRIPTIONS2 *****************
+	//*****************SUBSRIPTION *****************
 	
 	
 			@Given("User see SUBSCRIPTION Lable")
@@ -126,9 +122,9 @@ public class StepDefs {
 			 }
 			
 			 
-	//*****************SUBSRIPTIONS2 *****************
+	//*****************SUBSRIPTION *****************
 		
-	//*****************ErrorMessageS3*****************//
+	//*****************ErrorMessage*****************//
 
 			  
 				  @Given("User Navigate to Login Page")
@@ -154,37 +150,14 @@ public class StepDefs {
 				  public void validation_of_error_message(String message) {
 					  signupandloginpage.Validatingerrormsg(message);
 				  }
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-//			 @Given("User Navigate to Login Page")
-//				 public void user_navigate_to_login_page() {
-//				 landingpage.clickOnSignUpLoginBtn();
-//				 }
-//			 @When("User enters {string} and {string}")
-//				 public void user_enters_and(String Username , String Password ) {
-//				 signupandloginpage.Checkitsvalidornot(Username,Password);
-//				    
-//				 }
-//				
-//				 @Then("Error Message displayed")
-//				 public void error_message_displayed() {
-//				     // Write code here that turns the phrase above into concrete actions
-//				     throw new io.cucumber.java.PendingException();
-//				 }
-//*****************ErrorMessageS3*****************//
+		  
+
+//*****************ErrorMessage*****************//
 
 
 			 	
 	
-	//***************** Sign up\\/loginS4 ************************
+	//***************** Sign up\\/login ************************
 
 	@Given("user clicks on Signup\\/login button form top header section")
 	public void user_clicks_on_signup_login_button_form_top_header_section()
@@ -234,7 +207,7 @@ public class StepDefs {
 	   
 	}
 }
-//***************** Sign up\\/loginS4 ************************
+//***************** Sign up\\/login ************************
 	
 
 

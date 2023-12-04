@@ -1,0 +1,21 @@
+2023-Dec-04 10:01:39 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Setting up for browser path is completed
+2023-Dec-04 10:01:39 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Setting up chrome binary completed
+2023-Dec-04 10:01:41 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Chrome Browser invoked
+2023-Dec-04 10:01:41 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-04 10:01:46 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-04 10:01:50 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-04 10:01:50 AM [main] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-04 10:01:50 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Setting up for browser path is completed
+2023-Dec-04 10:01:50 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Setting up chrome binary completed
+2023-Dec-04 10:01:52 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Chrome Browser invoked
+2023-Dec-04 10:01:52 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-04 10:04:59 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-04 10:07:31 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-04 10:07:31 AM [main] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed
+2023-Dec-04 10:07:31 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Setting up for browser path is completed
+2023-Dec-04 10:07:31 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Setting up chrome binary completed
+2023-Dec-04 10:07:32 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Chrome Browser invoked
+2023-Dec-04 10:07:33 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver maximized and implicit time out set to 20 seconds
+2023-Dec-04 10:10:25 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Browser navigated to the url: https://automationexercise.com/
+2023-Dec-04 10:11:43 AM [main] INFO  com.assignmentdemo.webdriver.WebDriverfactory - Driver closed
+2023-Dec-04 10:11:43 AM [main] INFO  com.assignmentdemo.stepdefs.StepDefs - Browser got closed

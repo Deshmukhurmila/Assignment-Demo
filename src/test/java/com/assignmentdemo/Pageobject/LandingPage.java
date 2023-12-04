@@ -1,6 +1,5 @@
 package com.assignmentdemo.Pageobject;
 import java.util.List;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LandingPage {
 	
 	
-	//private static final Logger logger = LogManager.getLogger(LandingPage.class);
 	
 	private WebDriver driver;
 	private WebDriverWait wait;
@@ -31,26 +29,33 @@ public class LandingPage {
     private By Enteremailidfield = By.xpath("//input[@id='susbscribe_email']");
     private By Arrowbuttonclick = By.xpath("//i[@class='fa fa-arrow-circle-o-right']");
     private By ValidatenavbarList = By.xpath("//ul[@class='nav navbar-nav']");
+    private By Headersecactuallist = By.xpath("//ul[@class='nav navbar-nav']/li[a]");
     private By Loginbtn = By.xpath("//button[@class='btn btn-default']");
     private By Successalert =By.xpath("//div[text()='You have been successfully subscribed!']");
-  
-   // Page Methods
-  //***************VALIDATION S1*******************************************************************************
+    // Page Methods
+
     public void Validatingheaderbtns()
     {
     	WebElement ValidatingheaderbtnsEle = driver.findElement(ValidatenavbarList);
 	    Assert.assertEquals(true, ValidatingheaderbtnsEle.isDisplayed());
 	    
    }
-    public void ValidateeleHeaderList(String Headerlist)
+    
+    public void ValidateeleHeaderList(List<String> Validatingheaderbtns)
     {
-    	List<WebElement> searchedProdListEle = driver.findElements(ValidatenavbarList);
- 	   Assert.assertEquals(true, searchedProdListEle.get(0).getText().contains(Headerlist));
+    	
+    	List<String>  HeadersectionListEle = Validatingheaderbtns;
+   	List<WebElement> ActBrandcatagoryListEle=driver.findElements(Headersecactuallist);
+		  for(int i = 0 ; i < Validatingheaderbtns.size() ;i++)
+	  {
+		  Assert.assertEquals(true, ActBrandcatagoryListEle.get(i).getText().trim().contains(HeadersectionListEle.get(i).trim()));
+		  }
+   	   
     }
  
-    //***************VALIDATION S1*******************************************************************************
+  
     
-  //*****************SUBSRIPTIONS2 ********************************************************************************
+ 
     public void validateSUBSCRIPTIONlablefooter()
     {
 		WebElement subsriptionlableele = driver.findElement(subsriptionlable);
@@ -73,7 +78,7 @@ public class LandingPage {
     	WebElement Successalertele = driver.findElement(Successalert);
 		Assert.assertEquals(true, Successalertele.isDisplayed());
     }
-  //*****************SUBSRIPTIONS2 ***************************************************************
+
 
     
     public void clickOnSignUpLoginBtn()
