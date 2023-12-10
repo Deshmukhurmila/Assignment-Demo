@@ -1,14 +1,14 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "04d2a265-e050-415f-8195-e6cf234fde2f",
+    "id": "1db8fa6c-acbc-4e7a-930d-661a03e43e3a",
     "feature": "E-commerce application demo check",
-    "scenario": "After launching url User is able to see, enter an email id  under subscription",
-    "start": 1701675628577,
+    "scenario": "Validate the header elements",
+    "start": 1702203867498,
     "group": 1,
     "content": "",
-    "tags": "@ui,@democheck,@subscription,",
-    "end": 1701675650470,
+    "tags": "@ui,@democheck,@validationoflandingpageelement,",
+    "end": 1702204072280,
     "className": "passed"
   }
 ]);

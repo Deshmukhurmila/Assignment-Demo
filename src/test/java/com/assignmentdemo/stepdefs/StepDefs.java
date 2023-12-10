@@ -85,7 +85,7 @@ public class StepDefs {
 		public void options_underheader_section(List<String> expectedElementTexts)
 		{
 			
-		        List<WebElement> elements = driver.findElements(By.xpath("//ul[@class='nav navbar-nav']/li[a]"));
+		        List<WebElement> elements = driver.findElements(By.xpath("//ul[@class='nav navbar-nav']/li/a"));
 
 		        for (int i = 0; i < expectedElementTexts.size(); i++) {
 		            String actualText = elements.get(i).getText();

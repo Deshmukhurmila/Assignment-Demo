@@ -29,7 +29,7 @@ public class LandingPage {
     private By Enteremailidfield = By.xpath("//input[@id='susbscribe_email']");
     private By Arrowbuttonclick = By.xpath("//i[@class='fa fa-arrow-circle-o-right']");
     private By ValidatenavbarList = By.xpath("//ul[@class='nav navbar-nav']");
-    private By Headersecactuallist = By.xpath("//ul[@class='nav navbar-nav']/li[a]");
+    private By Headersecactuallist = By.xpath("//ul[@class='nav navbar-nav']/li/a");
     private By Loginbtn = By.xpath("//button[@class='btn btn-default']");
     private By Successalert =By.xpath("//div[text()='You have been successfully subscribed!']");
     // Page Methods
